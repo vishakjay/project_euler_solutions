@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-unsigned long long fib(unsigned long long){
+unsigned long long fib(unsigned long long n){
   long long a=1,b=2,c=0;
   unsigned long long sum=0;
   while(b<=n){
