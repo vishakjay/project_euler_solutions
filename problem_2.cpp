@@ -1,20 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
-unsigned long long fib(unsigned long long n){
-  long long a=1,b=2,c=0;
-  unsigned long long sum=0;
-  while(b<=n){
-    if(b%2==0){
-      sum+=b;
-    }
-    c=a+b;
-    a=b;
-    b=c;
-  }
+long long fib(long long n){
+	long long a=1,b=2,c=0;
+	//unsigned long long last;
+	unsigned long long sum=0;
+	//vector<long long>v
+	while(c<=n){
+		
+		if(b%2==0){
+			//v.push_back(b);
+			sum+=b;
+			//cout<<b<<" ";
+		}
+		c=a+b;
+		a=b;
+		b=c;
+	}
+	//long long sum=0;
+	//sum=accumulate(v.begin(),v.end(),sum);
+	//cout<<sum/2<<" ";
+	return sum;
 }
 int main(){
-unsigned long long ans=fib(4e6);
-  cout<<ans<<endl;
-  return 0;
+	long long ans=fib(4e6);
+	cout<<ans;
+	return 0;
 }
-//Answer is 4613732
